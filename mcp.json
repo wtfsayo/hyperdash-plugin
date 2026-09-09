@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "hyperdash-info": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["server/index.mjs"],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "HYPERDASH_API_URL": "https://api.hyperdash.com"
+      }
+    }
+  }
+}

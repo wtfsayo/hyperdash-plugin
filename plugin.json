@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hyperdash-info",
+  "version": "0.1.0",
+  "description": "Read-only Hyperdash terminal intel via public GraphQL — asset price changes, trader explore, liquidations, news, top positions. No order mutations.",
+  "author": {
+    "name": "Sayo",
+    "email": "hi@sayo.wtf",
+    "url": "https://github.com/wtfsayo"
+  },
+  "homepage": "https://hyperdash.com",
+  "keywords": ["hyperdash", "hyperliquid", "traders", "liquidations", "mcp"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "hyperdash-info",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-dep stdio MCP for Hyperdash public GraphQL reads"
+}
