@@ -2,7 +2,6 @@
 node_modules/
 TEST-RESULTS.json
 THESIS-SNAPSHOT.json
-*.log
 THESIS-LIVE.json
-THESIS-SNAPSHOT.json
-TEST-RESULTS.json
+*.log
+_probe/

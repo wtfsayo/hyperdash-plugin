@@ -1,7 +1,7 @@
 {
   "name": "hyperdash-info",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Zero-dep stdio MCP for Hyperdash public GraphQL reads"
+  "description": "Zero-dep stdio MCP for Hyperdash public GraphQL reads — expanded coverage (deltas, liq levels, widgets, trader stats)"
 }
