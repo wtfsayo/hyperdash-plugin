@@ -31,9 +31,13 @@ Site: https://hyperdash.com · Docs: https://docs.hyperdash.com (product docs; p
 | `FundingHistory` | raw analytics.historicalFundingRates payload |
 | `WidgetRequest` | `{ id, type, params }` nested per-widget camelCase key |
 
-## Install
+## Install (Cursor IDE)
 
 Copy to `~/.cursor/plugins/local/hyperdash-info`, Reload Window.
+
+## Install (Claude Code)
+
+Clone this repo, then start Claude Code with `claude --plugin-dir /path/to/hyperdash-plugin`. `.claude-plugin/plugin.json` loads the skill and starts the MCP server with `node ${CLAUDE_PLUGIN_ROOT}/server/index.mjs`. The server has no dependencies, so it needs only Node on `PATH` and no `npm install`. To point it at another host, export `HYPERDASH_API_URL` before you launch Claude Code.
 
 ## MCP tools (28)
 
