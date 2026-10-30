@@ -1,0 +1,67 @@
+{
+  "calls": {
+    "get_health": {},
+    "list_asset_price_changes": {},
+    "explore_traders": { "timeframe": "one_day" },
+    "get_trader": { "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00" },
+    "get_asset_top_traders": { "coin": "BTC" },
+    "get_recent_liquidations": {},
+    "get_news": {},
+    "get_current_twaps": {},
+    "get_historical_funding_rates": { "tokens": ["BTC"] },
+    "list_liquidation_totals": {},
+    "get_perp_deltas": { "market": "BTC", "timeframe": "24h" },
+    "get_spot_deltas": { "token": "HYPE", "timeframe": "24h" },
+    "get_trader_best_trades": { "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00" },
+    "get_trader_stats_per_asset": { "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00" },
+    "get_trader_detailed_stats": { "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00" },
+    "list_trader_completed_trades": { "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00" },
+    "get_traders": {
+      "addresses": ["0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00", "0x7fdafde5cfb5465924316eced2d3715494c517d1"]
+    },
+    "list_system_group_traders": { "groupId": "tagged" },
+    "get_group": { "groupId": "tagged" },
+    "get_liquidation_levels": { "coin": "SOL" },
+    "get_current_top_liquidations": { "coin": "BTC" },
+    "get_historical_open_interest": { "tokens": ["BTC"] },
+    "get_perps_market_participation": {},
+    "list_spot_ticker_positions": { "coin": "HYPE" },
+    "get_orderbook_snapshot_filtered": { "market": "ETH", "minPrice": "{{mark:ETH*0.99}}", "maxPrice": "{{mark:ETH*1.01}}" },
+    "get_trader_perp_positions_at": {
+      "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "timestamp": "{{now-86400000}}"
+    },
+    "list_perp_rfq_markets": {},
+    "get_widget": [
+      { "type": "OI_SURGES" },
+      { "type": "IMMINENT_LIQUIDATIONS" },
+      { "type": "FUNDING_RATES" },
+      { "type": "SMART_MONEY_FLIPS", "params": { "coin": "BTC" } },
+      { "type": "CVD", "params": { "market": "BTC" } },
+      { "type": "TOP_UPNL_CHANGES" },
+      { "type": "LARGEST_OPENED_TRADES" },
+      { "type": "NET_TWAP_PRESSURE" },
+      { "type": "ASSET_RETURNS" },
+      { "type": "TOP_PERP_UNREALIZED_PNL" },
+      { "type": "TOP_PERP_POSITIONS" },
+      { "type": "FRESH_WALLET_POSITIONS" },
+      { "type": "WHALE_DEPOSITS" },
+      { "type": "TOP_TWAPS" },
+      { "type": "LIQUIDATION_FEED" },
+      { "type": "OPEN_INTEREST" },
+      { "type": "USER_GROWTH" },
+      { "type": "AF_BUYBACKS" },
+      { "type": "PERP_PRICE_CHANGES" },
+      { "type": "NET_POSITIONING" }
+    ]
+  },
+  "errors": [
+    { "tool": "get_trader", "args": { "address": "vitalik.eth" }, "expect": "0x-prefixed" },
+    { "tool": "get_traders", "args": { "addresses": ["0x123"] }, "expect": "0x-prefixed" },
+    { "tool": "get_perp_deltas", "args": { "market": "BTC", "timeframe": "2h" }, "expect": "timeframe must be one of 15m|1h|4h|24h|3d|7d" },
+    { "tool": "explore_traders", "args": {}, "expect": "timeframe must be one of one_day" },
+    { "tool": "get_historical_funding_rates", "args": { "tokens": ["BTC"], "timeframe": "90d" }, "expect": "timeframe must be one of 7d|30d" },
+    { "tool": "get_widget", "args": { "type": "NOPE" }, "expect": "type must be one of" },
+    { "tool": "get_liquidation_levels", "args": { "coin": "NOTACOIN" }, "expect": "no mark price", "network": true }
+  ]
+}

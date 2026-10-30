@@ -1,6 +1,6 @@
 {
   "name": "hyperdash-info",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Read-only Hyperdash terminal intel via public GraphQL — asset movers, trader explore/stats, liquidations/levels, deltas, spot holders, dashboard widgets, RFQ markets. No order mutations.",
   "author": {
     "name": "Sayo",
